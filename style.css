@@ -10,6 +10,9 @@
 :root {
   --bg-linear-gradient: linear-gradient(45deg, #190361 0%, #B0F 100%);
   --color-title: #34355B;
+  --bg-color-message: #E4EDF1;
+  --bg-color-button: #FF9500;
+  --bg-color-hover-button: #EB9318;
   font-size: 62.5%;
 }
 
@@ -27,6 +30,10 @@ textarea {
   font: 400 1.6rem 'DM Sans', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
 main {
   width: min(42.8rem, 90%);
   padding: 4.8rem 6.4rem 6.4rem;
@@ -36,10 +43,14 @@ main {
   border-radius: .5rem;
 }
 
-main h1 {
-  margin-bottom: 1.4rem;
+main h1,
+main h2 {
   font: 700 2.4rem 'Montserrat', sans-serif;
   color: var(--color-title);
+}
+
+main h1 {
+  margin-bottom: 1.4rem;
 }
 
 main p {
@@ -51,4 +62,34 @@ main p {
 main img {
   width: 30rem;
   height: 20rem;
+}
+
+.screen2 h2,
+.screen2 p,
+.screen2 img {
+  margin-bottom: 1.8rem;
+}
+
+.screen2 p {
+  padding: 1rem;
+  font: 400 2.4rem 'Dancing Script', cursive;
+  color: #000;
+  box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.50);
+  background-color: var(--bg-color-message);
+}
+
+.screen2 button {
+  padding: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFF;
+  background-color: var(--bg-color-button);
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.screen2 button:hover {
+  background-color: var(--bg-color-hover-button);
 }
