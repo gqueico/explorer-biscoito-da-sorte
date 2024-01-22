@@ -64,6 +64,12 @@ main img {
   height: 20rem;
 }
 
+main button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .screen2 h2,
 .screen2 p,
 .screen2 img {
