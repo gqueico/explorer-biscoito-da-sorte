@@ -87,6 +87,7 @@ main img {
   color: #000;
   box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.50);
   background-color: var(--bg-color-message);
+  animation: appear 1s 200ms ease-in-out backwards;
 }
 
 .screen2 button {
@@ -135,5 +136,11 @@ main img {
   }
   100% {
     transform: translate(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: scaleX(0) translateY(140px);
   }
 }
