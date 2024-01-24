@@ -24,6 +24,7 @@ let randomPhrase = Math.round(Math.random() * fortuneCookiePhrases.length)
 
 fortuneCookie.addEventListener('click', handleCookieClick)
 newCookie.addEventListener('click', handleNewCookieClick)
+document.addEventListener('keydown', handleKeydownEnter)
 
 function handleCookieClick() {
   toggleScreen()
@@ -38,6 +39,14 @@ function handleCookieClick() {
 function handleNewCookieClick() {
   toggleScreen()
   randomPhrase = Math.round(Math.random() * fortuneCookiePhrases.length)
+}
+
+function handleKeydownEnter(event) {
+  if(event.key == 'Enter' && screen2.classList.contains("hide")) {
+    handleCookieClick()
+  } else if(event.key == 'Enter' && screen1.classList.contains("hide")) {
+    handleNewCookieClick()
+  }
 }
 
 function toggleScreen() {
