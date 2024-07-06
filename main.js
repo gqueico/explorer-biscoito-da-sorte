@@ -20,6 +20,7 @@ const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
 const fortuneCookie = document.querySelector("#fortuneCookie")
 const newCookie = document.querySelector("#newCookie")
+
 let randomPhrase = Math.round(Math.random() * fortuneCookiePhrases.length)
 
 fortuneCookie.addEventListener('click', handleCookieClick)
@@ -42,9 +43,7 @@ function handleNewCookieClick() {
 }
 
 function handleKeydownEnter(event) {
-  if(event.key == 'Enter' && screen2.classList.contains("hide")) {
-    handleCookieClick()
-  } else if(event.key == 'Enter' && screen1.classList.contains("hide")) {
+  if(event.key == 'Enter' && screen1.classList.contains('hide')) {
     handleNewCookieClick()
   }
 }
