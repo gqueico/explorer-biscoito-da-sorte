@@ -16,10 +16,10 @@ const fortuneCookiePhrases = [
   'Quem quer colher rosas tem de estar preparado para suportar os espinhos.'
 ]
 
-const screen1 = document.querySelector(".screen1")
-const screen2 = document.querySelector(".screen2")
-const fortuneCookie = document.querySelector("#fortuneCookie")
-const newCookie = document.querySelector("#newCookie")
+const screen1 = document.querySelector('.screen1')
+const screen2 = document.querySelector('.screen2')
+const fortuneCookie = document.querySelector('#fortuneCookie')
+const newCookie = document.querySelector('#newCookie')
 
 let randomPhrase = Math.round(Math.random() * fortuneCookiePhrases.length)
 
@@ -34,7 +34,7 @@ function handleCookieClick() {
     randomPhrase = randomPhrase - 1
   }
 
-  screen2.querySelector("p").innerText = fortuneCookiePhrases[randomPhrase]
+  screen2.querySelector('p').innerText = fortuneCookiePhrases[randomPhrase]
 }
 
 function handleNewCookieClick() {
@@ -49,6 +49,6 @@ function handleKeydownEnter(event) {
 }
 
 function toggleScreen() {
-  screen1.classList.toggle("hide")
-  screen2.classList.toggle("hide")
+  screen1.classList.toggle('hide')
+  screen2.classList.toggle('hide')
 }
